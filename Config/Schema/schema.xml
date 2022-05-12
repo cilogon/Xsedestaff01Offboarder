@@ -1,0 +1,22 @@
+<?xml version="1.0" ?>
+
+<schema version="0.3">
+    <table name="xsedestaff_offboard_petitions">
+        <field name="id" type="I">
+            <key />
+            <autoincrement />
+        </field>
+        <field name="co_id" type="I">
+            <notnull />
+            <constraint>REFERENCES cm_cos(id)</constraint>
+        </field>
+        <field name="offboarder_co_person_id" type="I">
+            <constraint>REFERENCES cm_co_people(id)</constraint>
+        </field>
+        <field name="petitioner_co_person_id" type="I">
+            <constraint>REFERENCES cm_co_people(id)</constraint>
+        </field>
+    </table>
+
+
+</schema>
